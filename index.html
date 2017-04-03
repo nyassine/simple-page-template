@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-expression-one-time-production</title>
+  <link type="text/css" rel="stylesheet" href="style.css"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+  <script src="script.js"></script>
+  
+
+  
+</head>
+
+
+<body ng-app="myApp">
+  <header>
+    
+  
+  <h1 ng-init="version = 0.1">
+Alien Search {{ version }}
+  </h1>
+  
+  </header>
+  
+  <main ng-controller="AlienController" ng-app="ngAnimate">
+<h2>
+Have you seen an alien?
+</h2>
+<p>
+He's my <strong>friend</strong> and I don't know where he is right now can you help please?
+</p>
+
+  <div>
+
+    <button type="button" ng-click="yes()">Yes</button>
+    <button type="button" ng-click="no()">No</button>
+
+{{ result }}
+
+  </div>
+  
+  <div ng-show="yesAnswer" ng-animate="'smooth'">
+    <h2>
+Where's the alien tho?
+</h2>
+<p>
+Where's my alien friend he's in danger help me find him <i>please</i>?
+</p>
+    </div>
+    
+      <div ng-show="noAnswer" ng-animate="'smooth'">
+    <h2>
+Really tho?
+</h2>
+<p>
+I'm pretty sure you did. Have you seen an alien <i>please</i>?
+</p>
+    </div>
+    
+    
+</main>
+</body>
+</html>
+
